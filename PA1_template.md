@@ -66,8 +66,6 @@ dailyMedian <- median(dailySteps$steps)
 
 ## What is the average daily activity pattern?
 ##### Time series plot of the average number of steps taken
-##### The 5-minute interval that, on average, contains the maximum number of steps
-##### Interval equal to five minutes
 
 ```r
 intervalSteps <- aggregate(steps ~ interval, data, mean)
@@ -80,6 +78,9 @@ plot(intervalSteps$interval,intervalSteps$steps, type="l", xlab="Interval", ylab
 ```r
 maximumInterval <- intervalSteps[which.max(intervalSteps$steps),1]
 ```
+
+##### The 5-minute interval that, on average, contains the maximum number of steps  
+
 - Interval with maximum number of steps: 835
 
 
